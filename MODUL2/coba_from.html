@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Percobaan</title>
+</head>
+<body>
+
+    <h2>Form Input Data</h2>
+
+    <form action="" method="get" target="_self">
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td><input type="text" name="nama"></td>
+            </tr>
+            <tr>
+                <td>NIM</td>
+                <td><input type="text" name="nim"></td>
+            </tr>
+            <tr>
+                <td>Jurusan</td>
+                <td><input type="text" name="jurusan"></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>
+                    <input type="radio" name="jk" value="Laki-laki"> Laki-laki
+                    <input type="radio" name="jk" value="Perempuan"> Perempuan
+                </td>
+            </tr>
+            <tr>
+                <td>Hobi</td>
+                <td>
+                    <input type="checkbox" name="hobi" value="Membaca"> Membaca
+                    <input type="checkbox" name="hobi" value="Olahraga"> Olahraga
+                    <input type="checkbox" name="hobi" value="Gaming"> Gaming
+                </td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td><textarea name="alamat"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Kirim">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <h3>Kesimpulan</h3>
+    <p>
+        Berdasarkan hasil percobaan, tombol reset berfungsi untuk menghapus semua data yang telah diinputkan pada form sehingga kembali ke kondisi awal. 
+        Tombol kirim digunakan untuk mengirimkan data yang telah diisi ke server sesuai dengan atribut method yang digunakan. 
+        Atribut target berfungsi untuk menentukan di mana hasil pengiriman data akan ditampilkan, seperti _self (halaman yang sama) dan _blank (membuka di tab baru). 
+        Method GET menampilkan data pada URL sehingga mudah dilihat, sedangkan POST tidak menampilkan data pada URL sehingga lebih aman untuk data sensitif.
+    </p>
+
+</body>
+</html>
