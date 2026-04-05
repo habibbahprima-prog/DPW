@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Jam dan Tanggal Real-Time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .clock-container {
+            background: #2c3e50;
+            color: white;
+            padding: 30px 50px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .date {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .time {
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="clock-container">
+        <div class="date" id="tanggal"></div>
+        <div class="time" id="jam"></div>
+    </div>
+
+    <script>
+        function updateJam() {
+            const sekarang = new Date();
+
+            const hari = sekarang.toLocaleDateString('id-ID', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            let jam = sekarang.getHours().toString().padStart(2, '0');
+            let menit = sekarang.getMinutes().toString().padStart(2, '0');
+            let detik = sekarang.getSeconds().toString().padStart(2, '0');
+
+            document.getElementById("tanggal").innerHTML = hari;
+            document.getElementById("jam").innerHTML = jam + ":" + menit + ":" + detik;
+        }
+
+        setInterval(updateJam, 1000);
+        updateJam();
+    </script>
+
+</body>
+</html>

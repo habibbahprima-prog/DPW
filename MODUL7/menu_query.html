@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Makanan jQuery</title>
+
+    <!-- jQuery & jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #menu {
+            width: 250px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Menu Makanan</h2>
+
+    <ul id="menu">
+        <li><div>Beranda</div></li>
+
+        <li>
+            <div>Makanan Utama</div>
+            <ul>
+                <li><div>Nasi Goreng</div></li>
+                <li><div>Mie Ayam</div></li>
+                <li><div>Sate Ayam</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <div>Minuman</div>
+            <ul>
+                <li><div>Es Teh</div></li>
+                <li><div>Jus Jeruk</div></li>
+                <li><div>Kopi</div></li>
+            </ul>
+        </li>
+
+        <li>
+            <div>Dessert</div>
+            <ul>
+                <li><div>Es Krim</div></li>
+                <li><div>Puding</div></li>
+            </ul>
+        </li>
+
+        <li class="ui-state-disabled">
+            <div>Menu Spesial (Segera Hadir)</div>
+        </li>
+    </ul>
+
+    <script>
+        $(function () {
+            $("#menu").menu();
+        });
+    </script>
+
+</body>
+</html>

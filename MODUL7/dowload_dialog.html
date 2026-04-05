@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Download Dialog dengan Progress Bar</title>
+
+    <!-- jQuery & jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        #dialog {
+            display: none;
+        }
+
+        #progressbar {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Simulasi Download dengan Progress Bar</h2>
+
+    <button id="startDownload">Mulai Download</button>
+
+    <!-- Dialog -->
+    <div id="dialog" title="Proses Download">
+        <p>File sedang diunduh, mohon tunggu...</p>
+        <div id="progressbar"></div>
+    </div>
+
+    <script>
+        $(function () {
+            var progress = 0;
+
+            // Inisialisasi progressbar
+            $("#progressbar").progressbar({
+                value: 0
+            });
+
+            // Inisialisasi dialog
+            $("#dialog").dialog({
+                autoOpen: false,
+                modal: true,
+                closeOnEscape: false,
+                resizable: false
+            });
+
+            // Event tombol download
+            $("#startDownload").click(function () {
+                progress = 0;
+                $("#progressbar").progressbar("value", progress);
+                $("#dialog").dialog("open");
+
+                var interval = setInterval(function () {
+                    progress += 10;
+                    $("#progressbar").progressbar("value", progress);
+
+                    if (progress >= 100) {
+                        clearInterval(interval);
+                        $("#dialog").dialog("option", "title", "Selesai");
+                        $("#dialog p").text("Download berhasil diselesaikan!");
+                    }
+                }, 500);
+            });
+        });
+    </script>
+
+</body>
+</html>
