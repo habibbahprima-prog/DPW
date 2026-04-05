@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Gambar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nama Anda"> <meta name="nim" content="NIM Anda"> <style>
+        * { box-sizing: border-box; } /* [cite: 41] */
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; } /* [cite: 44] */
+        header { background-color: #666; padding: 30px; text-align: center; font-size: 35px; color: white; } /* [cite: 47-51] */
+        
+        /* Layout kolom kiri untuk navigasi */
+        nav { float: left; width: 30%; background: #ccc; padding: 20px; min-height: 500px; } /* [cite: 54-58] */
+        nav ul { list-style-type: none; padding: 0; } /* [cite: 60-61] */
+        
+        /* Layout kolom kanan untuk konten gambar */
+        article { float: left; padding: 20px; width: 70%; background-color: #f1f1f1; min-height: 500px; } /* [cite: 64-67] */
+        
+        /* Clearfix agar footer tetap di bawah [cite: 71-75] */
+        section::after { content: ""; display: table; clear: both; } 
+        
+        footer { background-color: #777; padding: 10px; text-align: center; color: white; } /* [cite: 78-81] */
+
+        /* Styling tambahan khusus untuk galeri gambar agar rapi */
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery-container img {
+            width: calc(33.33% - 10px); /* Menampilkan 3 gambar per baris */
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            background-color: white;
+        }
+
+        /* Responsive layout [cite: 82-87] */
+        @media (max-width: 600px) { 
+            nav, article { width: 100%; height: auto; } 
+            .gallery-container img { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Judul Website</h2> </header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Gambar Pemandangan</h1> <div class="gallery-container">
+            <img src="Img/G1.jpg" alt="Pemandangan 1">
+            <img src="Img/G2.jpg" alt="Pemandangan 2">
+            <img src="Img/G3.jpg" alt="Pemandangan 3">
+            <img src="Img/G4.webp" alt="Pemandangan 4">
+        </div>
+        
+        <p><b>Kesimpulan:</b> Penggunaan tag <code>&lt;article&gt;</code> dengan <code>float: left</code> memungkinkan konten muncul di samping navigasi secara sejajar. [cite: 29, 99]</p>
+    </article>
+</section>
+
+<footer>
+    <p>Footer - NIM: 123456 | Nama: John Doe</p> </footer>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Halaman Gambar - Praktikum 3</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nama Anda"> <meta name="nim" content="NIM Anda"> <style>
+        * { box-sizing: border-box; } [cite: 41]
+        body { font-family: Arial, Helvetica, sans-serif; margin: 0; } [cite: 44]
+        header { background-color: #666; padding: 30px; text-align: center; font-size: 35px; color: white; } [cite: 47-51]
+        
+        nav { float: left; width: 30%; background: #ccc; padding: 20px; min-height: 500px; } [cite: 54-58]
+        nav ul { list-style-type: none; padding: 0; } [cite: 60-61]
+        
+        article { float: left; padding: 20px; width: 70%; background-color: #f1f1f1; min-height: 500px; } [cite: 64-67]
+        
+        section::after { content: ""; display: table; clear: both; } [cite: 73-75]
+        
+        footer { background-color: #777; padding: 10px; text-align: center; color: white; } [cite: 78-81]
+
+        /* Styling Galeri agar sesuai tampilan modul */
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery-container img {
+            width: calc(33.33% - 15px);
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Responsive [cite: 82-87] */
+        @media (max-width: 600px) { 
+            nav, article { width: 100%; height: auto; } 
+        }
+        
+        .kesimpulan-box {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #e7eff6;
+            border-left: 5px solid #337ab7;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>Judul Website</h2> [cite: 21]
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gambar.html">Gambar</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="audio.html">Audio</a></li>
+            <li><a href="video.html">Video</a></li>
+            <li><a href="svg.html">SVG</a></li>
+            <li><a href="canvas.html">Canvas</a></li>
+            <li><a href="pendaftaran.html">Pendaftaran</a></li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>mouse event</h1> [cite: 108]
+        
+        <div class="gallery-container">
+            <img src="Img/m1.png" alt="Pemandangan 1">
+            <img src="Img/m2.webp" alt="Pemandangan 3">
+            <img src="Img/m3.webp" alt="Pemandangan 4">
+            <img src="Img/m4.webp" alt="Pemandangan 5">
+            <img src="Img/m5.webp" alt="Pemandangan 6">
+        </div>
+
+        <div class="kesimpulan-box">
+            <h3>Kesimpulan Hasil Praktikum</h3>
+            <p>
+                Berdasarkan hasil uji coba pada halaman ini, saya mempelajari bahwa penggunaan elemen semantik HTML5 seperti 
+                <code>&lt;nav&gt;</code> dan <code>&lt;article&gt;</code> sangat memudahkan dalam mengatur struktur layout yang rapi. 
+                Dengan bantuan CSS <i>float</i> dan <i>width</i>, konten gambar berhasil diletakkan di samping menu navigasi secara presisi. 
+                Selain itu, saya juga memahami pentingnya penggunaan atribut <code>box-sizing: border-box</code> agar pengaturan padding 
+                tidak merusak lebar elemen yang sudah ditentukan.
+            </p>
+            <p><strong>NIM:</strong> 253307031 | <strong>Nama:</strong> habibbah prima risqullah</p>
+        </div>
+    </article>
+</section>
+
+<footer>
+    <p>Footer - Praktikum Pemrograman Web</p> [cite: 33]
+</footer>
+
+</body>
+</html>
