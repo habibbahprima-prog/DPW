@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout Grid</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "menu main right"
+                "footer footer footer";
+            gap: 12px;
+            padding: 12px;
+        }
+
+        .grid-container > div {
+            padding: 20px;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .header { 
+            grid-area: header; 
+            background: #1abc9c; 
+        }
+
+        .menu { 
+            grid-area: menu; 
+            background: #3498db; 
+        }
+
+        .main { 
+            grid-area: main; 
+            background: #9b59b6; 
+        }
+
+        .right { 
+            grid-area: right; 
+            background: #e67e22; 
+        }
+
+        .footer { 
+            grid-area: footer; 
+            background: #2c3e50; 
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="main">Main Content</div>
+        <div class="right">Sidebar</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
